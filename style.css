@@ -2923,3 +2923,10 @@ footer::after{
     font-weight:bold;
 
 }
+.email{
+
+    font-size:14px;
+
+    word-break:break-word;
+
+}
