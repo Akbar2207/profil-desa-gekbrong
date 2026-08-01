@@ -1,58 +1,110 @@
-/*=====================================
+/*=========================================
         HAMBURGER MENU
-======================================*/
+=========================================*/
 
 const menuToggle = document.querySelector(".menu-toggle");
-const navMenu = document.querySelector(".nav-menu");
+const menu = document.querySelector(".menu");
 
-menuToggle.addEventListener("click", () => {
+if (menuToggle) {
 
-    navMenu.classList.toggle("active");
+    menuToggle.addEventListener("click", () => {
 
-});
+        menu.classList.toggle("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        if(menu.classList.contains("active")){
+
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+
+        }else{
+
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+
+        }
+
+    });
+
+}
 
 
-/*=====================================
-      CLOSE MENU MOBILE
-======================================*/
+/*=========================================
+        TUTUP MENU SAAT DIKLIK
+=========================================*/
 
-document.querySelectorAll(".nav-menu a").forEach(link => {
+document.querySelectorAll(".menu a").forEach(link=>{
 
-    link.addEventListener("click", () => {
+    link.addEventListener("click",()=>{
 
-        navMenu.classList.remove("active");
+        menu.classList.remove("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
 
     });
 
 });
 
 
-/*=====================================
-      NAVBAR SCROLL
-======================================*/
+/*=========================================
+        NAVBAR SCROLL
+=========================================*/
 
-window.addEventListener("scroll", () => {
+const navbar = document.querySelector("nav");
 
-    const nav = document.querySelector("nav");
+window.addEventListener("scroll",()=>{
 
-    if(window.scrollY > 60){
+    if(window.scrollY > 80){
 
-        nav.style.background = "#1B5E20";
-        nav.style.boxShadow = "0 5px 20px rgba(0,0,0,.2)";
+        navbar.style.background="#1B5E20";
+
+        navbar.style.boxShadow="0 5px 20px rgba(0,0,0,.2)";
 
     }else{
 
-        nav.style.background = "rgba(27,94,32,.92)";
-        nav.style.boxShadow = "none";
+        navbar.style.background="rgba(27,94,32,.92)";
+
+        navbar.style.boxShadow="none";
 
     }
 
 });
 
 
-/*=====================================
-      ANIMATION ON SCROLL
-======================================*/
+/*=========================================
+        SMOOTH SCROLL
+=========================================*/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+    anchor.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const tujuan=document.querySelector(this.getAttribute("href"));
+
+        if(tujuan){
+
+            tujuan.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
+
+/*=========================================
+        ANIMASI MUNCUL
+=========================================*/
 
 const observer = new IntersectionObserver((entries)=>{
 
@@ -68,80 +120,40 @@ const observer = new IntersectionObserver((entries)=>{
 
 });
 
-document.querySelectorAll(".card,.info-card,.wisata-card,.box,.contact-box").forEach(el=>{
+document.querySelectorAll(".box,.profil,.struktur,.wisata-card,.info-kontak").forEach(el=>{
 
     observer.observe(el);
 
 });
 
 
-/*=====================================
-      ACTIVE MENU
-======================================*/
+/*=========================================
+        BACK TO TOP
+=========================================*/
 
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-menu a");
+const topBtn=document.createElement("button");
 
-window.addEventListener("scroll",()=>{
+topBtn.innerHTML='<i class="fas fa-arrow-up"></i>';
 
-    let current = "";
+topBtn.className="top-btn";
 
-    sections.forEach(section=>{
-
-        const sectionTop = section.offsetTop - 120;
-
-        const sectionHeight = section.clientHeight;
-
-        if(pageYOffset >= sectionTop){
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
-
-    navLinks.forEach(link=>{
-
-        link.classList.remove("active");
-
-        if(link.getAttribute("href") == "#" + current){
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
-
-
-/*=====================================
-      BACK TO TOP
-======================================*/
-
-const topButton = document.createElement("button");
-
-topButton.innerHTML = "↑";
-
-topButton.className = "top-btn";
-
-document.body.appendChild(topButton);
+document.body.appendChild(topBtn);
 
 window.addEventListener("scroll",()=>{
 
-    if(window.scrollY > 300){
+    if(window.scrollY>400){
 
-        topButton.style.display = "flex";
+        topBtn.style.display="flex";
 
     }else{
 
-        topButton.style.display = "none";
+        topBtn.style.display="none";
 
     }
 
 });
 
-topButton.addEventListener("click",()=>{
+topBtn.addEventListener("click",()=>{
 
     window.scrollTo({
 
@@ -150,24 +162,5 @@ topButton.addEventListener("click",()=>{
         behavior:"smooth"
 
     });
-
-});
-
-
-/*=====================================
-      HERO BUTTON EFFECT
-======================================*/
-
-const heroBtn = document.querySelector(".btn");
-
-heroBtn.addEventListener("mouseenter",()=>{
-
-    heroBtn.style.transform = "scale(1.05)";
-
-});
-
-heroBtn.addEventListener("mouseleave",()=>{
-
-    heroBtn.style.transform = "scale(1)";
 
 });

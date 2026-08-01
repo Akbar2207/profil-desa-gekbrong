@@ -11,6 +11,10 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
@@ -27,33 +31,31 @@
 
 <nav>
 
-    <div class="logo">
+<div class="logo">
 
-        <h2>Desa Gekbrong</h2>
+<h2>Desa Gekbrong</h2>
 
-    </div>
+</div>
 
-    <div class="menu-toggle">
+<div class="menu-toggle">
 
-        <i class="fas fa-bars"></i>
+<i class="fas fa-bars"></i>
 
-    </div>
+</div>
 
-    <ul class="nav-menu">
+<ul class="menu">
 
-        <li><a href="#home">Beranda</a></li>
+<li><a href="#home">Beranda</a></li>
 
-        <li><a href="#profil">Profil</a></li>
+<li><a href="#profil">Profil</a></li>
 
-        <li><a href="#informasi">Informasi</a></li>
+<li><a href="#struktur">Struktur</a></li>
 
-        <li><a href="#struktur">Struktur</a></li>
+<li><a href="#wisata">Wisata</a></li>
 
-        <li><a href="#wisata">Wisata</a></li>
+<li><a href="#kontak">Kontak</a></li>
 
-        <li><a href="#map">Lokasi</a></li>
-
-    </ul>
+</ul>
 
 </nav>
 
@@ -62,68 +64,42 @@
 <!-- ================= HERO ================= -->
 
 <section
-class="hero"
+
 id="home"
+
+class="hero"
 
 style="
 
 background-image:
 
-linear-gradient(
-rgba(0,0,0,.45),
-rgba(0,0,0,.45)
-),
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
 
 url('images/logo1.jpeg');
 
-background-size:cover;
-
-background-position:center;
-
-background-repeat:no-repeat;
-
 ">
 
-    <div class="overlay"></div>
+<div class="hero-content">
 
-    <div class="hero-content">
+<h1>Selamat Datang</h1>
 
-        <marquee
+<h2>Website Profil Desa Gekbrong</h2>
 
-            class="hero-marquee"
+<p>
 
-            direction="up"
+Kecamatan Gekbrong • Kabupaten Cianjur
 
-            behavior="slide"
+</p>
 
-            scrollamount="8">
+<a href="#profil" class="btn">
 
-            <h1>Selamat Datang</h1>
+Jelajahi Desa
 
-        </marquee>
+</a>
 
-        <h2>
-
-            Website Profil Desa Gekbrong
-
-        </h2>
-
-        <p>
-
-            Kecamatan Gekbrong • Kabupaten Cianjur
-
-        </p>
-
-        <a href="#profil" class="btn">
-
-            Jelajahi Desa
-
-        </a>
-
-    </div>
+</div>
 
 </section>
-
 <!-- ================= STATISTIK ================= -->
 
 <section class="statistik">
@@ -161,7 +137,8 @@ background-repeat:no-repeat;
     </div>
 
 </section>
-<!-- ================= PROFIL DESA ================= -->
+
+<!-- ================= PROFIL ================= -->
 
 <section id="profil">
 
@@ -173,121 +150,35 @@ background-repeat:no-repeat;
 
     </div>
 
-    <div class="card">
+    <div class="profil">
 
-        <div class="card-image">
+        <div class="profil-img">
 
-            <img src="images/desa.jpg"
-                 alt="Desa Gekbrong">
+            <img src="images/desa.jpg" alt="Desa Gekbrong">
 
         </div>
 
-        <div class="card-content">
+        <div class="profil-text">
 
             <h3>Desa Gekbrong</h3>
 
             <p>
 
-                Desa Gekbrong merupakan salah satu desa yang berada di
-                Kecamatan Gekbrong, Kabupaten Cianjur, Provinsi Jawa Barat.
-
-                Desa ini memiliki potensi wisata alam, perkebunan,
-                pertanian serta masyarakat yang menjunjung tinggi
+                Desa Gekbrong merupakan salah satu desa di Kecamatan
+                Gekbrong, Kabupaten Cianjur, Provinsi Jawa Barat.
+                Desa ini memiliki potensi wisata alam, pertanian,
+                perkebunan serta masyarakat yang menjunjung tinggi
                 nilai gotong royong.
 
             </p>
 
-            <a href="#informasi" class="btn2">
-
-                Selengkapnya
-
-            </a>
-
         </div>
 
     </div>
 
 </section>
 
-<!-- ================= INFORMASI DESA ================= -->
-
-<section id="informasi">
-
-    <div class="title">
-
-        <h2>Informasi Desa</h2>
-
-        <p>Data Umum Desa Gekbrong</p>
-
-    </div>
-
-    <div class="info-grid">
-
-        <div class="info-card">
-
-            <i class="fas fa-map-marker-alt"></i>
-
-            <h3>Nama Desa</h3>
-
-            <p>Desa Gekbrong</p>
-
-        </div>
-
-        <div class="info-card">
-
-            <i class="fas fa-building"></i>
-
-            <h3>Kecamatan</h3>
-
-            <p>Gekbrong</p>
-
-        </div>
-
-        <div class="info-card">
-
-            <i class="fas fa-city"></i>
-
-            <h3>Kabupaten</h3>
-
-            <p>Cianjur</p>
-
-        </div>
-
-        <div class="info-card">
-
-            <i class="fas fa-map"></i>
-
-            <h3>Provinsi</h3>
-
-            <p>Jawa Barat</p>
-
-        </div>
-
-        <div class="info-card">
-
-            <i class="fas fa-users"></i>
-
-            <h3>Jumlah Penduduk</h3>
-
-            <p>10.103 Jiwa</p>
-
-        </div>
-
-        <div class="info-card">
-
-            <i class="fas fa-home"></i>
-
-            <h3>Wilayah</h3>
-
-            <p>4 Dusun • 13 RW • 44 RT</p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= STRUKTUR DESA ================= -->
+<!-- ================= STRUKTUR ================= -->
 
 <section id="struktur">
 
@@ -299,12 +190,10 @@ background-repeat:no-repeat;
 
     </div>
 
-    <div class="struktur-box">
-
-        <!-- GANTI NAMA FILE SAJA JIKA BERUBAH -->
+    <div class="struktur">
 
         <img src="images/STRUKTUR DESA.jpg"
-             alt="Struktur Organisasi Desa">
+            alt="Struktur Organisasi Desa">
 
     </div>
 
@@ -324,22 +213,18 @@ background-repeat:no-repeat;
 
     <div class="wisata-grid">
 
-        <!-- WISATA 1 -->
-
         <div class="wisata-card">
 
-            <img src="images/curug.jpg"
-                 alt="Curug">
+            <img src="images/curug.jpg">
 
-            <div class="wisata-content">
+            <div class="isi">
 
                 <h3>Curug Goong</h3>
 
                 <p>
 
-                    Salah satu destinasi wisata alam
-                    yang menjadi daya tarik utama
-                    Desa Gekbrong.
+                    Curug Goong merupakan salah satu objek wisata
+                    alam yang menjadi kebanggaan Desa Gekbrong.
 
                 </p>
 
@@ -347,45 +232,19 @@ background-repeat:no-repeat;
 
         </div>
 
-        <!-- WISATA 2 -->
-
         <div class="wisata-card">
 
-            <img src="images/kebun.jpg"
-                 alt="Perkebunan">
+            <img src="images/waluh.jpeg">
 
-            <div class="wisata-content">
+            <div class="isi">
 
-                <h3>Perkebunan</h3>
+                <h3>Agrowisata Waluh</h3>
 
                 <p>
 
-                    Hamparan perkebunan hijau
-                    menjadi sumber mata pencaharian
-                    masyarakat Desa Gekbrong.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <!-- WISATA 3 -->
-
-        <div class="wisata-card">
-
-            <img src="images/waluh.jpeg"
-                 alt="Agrowisata">
-
-            <div class="wisata-content">
-
-                <h3>Agrowisata</h3>
-
-                <p>
-
-                    Wisata edukasi berbasis
-                    pertanian dan perkebunan
-                    masyarakat Desa Gekbrong.
+                    Wisata edukasi pertanian dengan hamparan
+                    tanaman waluh yang menjadi daya tarik
+                    masyarakat.
 
                 </p>
 
@@ -396,222 +255,45 @@ background-repeat:no-repeat;
     </div>
 
 </section>
-<!-- ================= MAP ================= -->
+<!-- ================= LOKASI ================= -->
 
-<section id="map">
+<section id="kontak">
 
     <div class="title">
 
-        <h2>Lokasi Desa Gekbrong</h2>
+        <h2>Lokasi & Kontak Desa</h2>
 
-        <p>Kecamatan Gekbrong • Kabupaten Cianjur</p>
+        <p>Informasi Kantor Desa Gekbrong</p>
 
     </div>
 
-    <div class="map-container">
+    <div class="kontak-container">
 
-        <!-- GOOGLE MAPS -->
-
-        <div class="map-box">
+        <div class="maps">
 
             <iframe
                 src="https://maps.google.com/maps?q=Desa%20Gekbrong%20Cianjur&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                allowfullscreen=""
                 loading="lazy">
             </iframe>
 
         </div>
 
-        <!-- KONTAK -->
+        <div class="info-kontak">
 
-        <div class="contact-box">
+            <h3>Kantor Desa Gekbrong</h3>
 
-            <h3>Hubungi Kami</h3>
-
-            <div class="contact-item">
+            <p>
 
                 <i class="fas fa-map-marker-alt"></i>
 
-                <div>
-
-                    <h4>Alamat</h4>
-
-                    <p>
-
-                        Jl. Raya Cianjur - Sukabumi KM.15
-                        <br>
-                        Desa Gekbrong
-                        <br>
-                        Kecamatan Gekbrong
-                        <br>
-                        Kabupaten Cianjur
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="contact-item">
-
-                <i class="fas fa-phone"></i>
-
-                <div>
-
-                    <h4>Telepon</h4>
-
-                    <p>0896-5542-2632</p>
-
-                </div>
-
-            </div>
-
-            <div class="contact-item">
-
-                <i class="fas fa-envelope"></i>
-
-                <div>
-
-                    <h4>Email</h4>
-
-                    <p>
-
-                        kantordesagekbrong@yahoo.com
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="contact-item">
-
-                <i class="fas fa-clock"></i>
-
-                <div>
-
-                    <h4>Jam Pelayanan</h4>
-
-                    <p>
-
-                        Senin - Jumat
-
-                        <br>
-
-                        08.00 - 15.00 WIB
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <h3 class="social-title">
-
-                Media Sosial
-
-            </h3>
-
-            <div class="social-media">
-
-                <a href="https://www.facebook.com/share/1BF1ueG1Pk/"
-                    target="_blank"
-                    class="facebook">
-
-                    <i class="fab fa-facebook-f"></i>
-
-                </a>
-
-                <a href="https://www.instagram.com/desa_gekbrong"
-                    target="_blank"
-                    class="instagram">
-
-                    <i class="fab fa-instagram"></i>
-
-                </a>
-
-                <a href="https://youtube.com"
-
-                    target="_blank"
-
-                    class="youtube">
-
-                    <i class="fab fa-youtube"></i>
-
-                </a>
-
-                <a href="https://tiktok.com"
-
-                    target="_blank"
-
-                    class="tiktok">
-
-                    <i class="fab fa-tiktok"></i>
-
-                </a>
-
-                <a href="https://wa.me/6289655422632"
-
-                    target="_blank"
-
-                    class="whatsapp">
-
-                    <i class="fab fa-whatsapp"></i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="footer-container">
-
-        <div class="footer-logo">
-
-            <h2>Desa Gekbrong</h2>
-
-            <p>
-
-                Website Profil Resmi Desa Gekbrong
+                Jl. Raya Cianjur - Sukabumi KM.15
+                <br>
+                Kecamatan Gekbrong
+                <br>
+                Kabupaten Cianjur
 
             </p>
-
-            <p>
-
-                Kecamatan Gekbrong • Kabupaten Cianjur
-
-            </p>
-
-        </div>
-
-        <div class="footer-menu">
-
-            <h3>Menu Cepat</h3>
-
-            <a href="#home">Beranda</a>
-
-            <a href="#profil">Profil</a>
-
-            <a href="#informasi">Informasi</a>
-
-            <a href="#struktur">Struktur</a>
-
-            <a href="#wisata">Wisata</a>
-
-            <a href="#map">Lokasi</a>
-
-        </div>
-
-        <div class="footer-kontak">
-
-            <h3>Kontak</h3>
 
             <p>
 
@@ -631,24 +313,77 @@ background-repeat:no-repeat;
 
             <p>
 
-                <i class="fas fa-map-marker-alt"></i>
+                <i class="fas fa-clock"></i>
 
-                Desa Gekbrong, Kecamatan Gekbrong,
-                Kabupaten Cianjur
+                Senin - Jumat
+
+                <br>
+
+                08.00 - 15.00 WIB
 
             </p>
+
+            <div class="social">
+
+                <a href="https://facebook.com" target="_blank">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+                <a href="https://instagram.com" target="_blank">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+                <a href="https://youtube.com" target="_blank">
+
+                    <i class="fab fa-youtube"></i>
+
+                </a>
+
+                <a href="https://wa.me/6289655422632" target="_blank">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                </a>
+
+            </div>
 
         </div>
 
     </div>
 
-    <div class="copyright">
+</section>
 
-        © 2026 KKN Universitas Suryakancana
+<!-- ================= FOOTER ================= -->
 
-        |
+<footer>
 
-        Website Profil Desa Gekbrong
+    <div class="footer-content">
+
+        <h2>Desa Gekbrong</h2>
+
+        <p>
+
+            Kecamatan Gekbrong • Kabupaten Cianjur
+
+        </p>
+
+        <p>
+
+            Website Profil Desa Gekbrong
+
+        </p>
+
+        <hr>
+
+        <p>
+
+            © 2026 KKN Universitas Suryakancana
+
+        </p>
 
     </div>
 
