@@ -1,31 +1,16 @@
-// Navbar berubah saat scroll
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector("nav ul");
 
-window.addEventListener("scroll",function(){
-
-const nav=document.querySelector("nav");
-
-nav.classList.toggle("scrolled",window.scrollY>50);
-
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
 });
 
-// Animasi muncul saat scroll
+document.querySelectorAll("nav ul li a").forEach(link => {
 
-const observer=new IntersectionObserver((entries)=>{
+    link.addEventListener("click", () => {
 
-entries.forEach(entry=>{
+        navMenu.classList.remove("active");
 
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-});
-
-document.querySelectorAll("section").forEach((el)=>{
-
-observer.observe(el);
+    });
 
 });
